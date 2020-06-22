@@ -17,6 +17,8 @@ brew install coreutils
 
 # grep
 brew install grep
+# gpg
+brew install gpg
 # imagemagick
 brew install imagemagick --with-webp
 # nodejs
@@ -42,8 +44,8 @@ fi;
 
 # Marta
 brew cask install marta
-# vimari
-git clone git@github.com:guyht/vimari.git ~/scripts/vimari
+# Keybase
+brew cask install keybase
 
 # Cleanup
 # ----------------------------

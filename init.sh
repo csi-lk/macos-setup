@@ -5,7 +5,6 @@ source ./lib/continue.sh
 # Create default files and directories
 echo "Creating folders..."
 
-mkdir ~/dev
 mkdir ~/hole
 mkdir ~/scripts
 

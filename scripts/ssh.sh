@@ -2,7 +2,7 @@
 
 # ssh
 ssh-keygen -t rsa -b 4096 -C "github@csi.lk"
-eval "$(ssh-agent -s)
+eval "$(ssh-agent -s)"
 touch ~/.ssh/config
 echo "Host *" >> ~/.ssh/config
 echo "  AddKeysToAgent yes" >> ~/.ssh/config
