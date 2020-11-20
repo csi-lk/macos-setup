@@ -25,6 +25,14 @@ then
     . ./scripts/ssh.sh
 fi
 
+# Setup Brew
+# ----------------------------
+
+if [[ "yes" == $(continue "Setup Brew?") ]]
+then
+    . ./scripts/brew.sh
+fi
+
 # Setup Git
 # ----------------------------
 
@@ -33,13 +41,6 @@ then
     . ./scripts/git.sh
 fi
 
-# Setup Brew
-# ----------------------------
-
-if [[ "yes" == $(continue "Setup Brew?") ]]
-then
-    . ./scripts/brew.sh
-fi
 
 # Setup Mac
 # ----------------------------
