@@ -32,6 +32,8 @@ brew install thefuck
 # Bash
 brew install bash
 brew install bash-completion2
+# Zplug
+brew install zplug
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
