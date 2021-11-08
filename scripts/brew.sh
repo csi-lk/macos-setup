@@ -20,13 +20,13 @@ brew install grep
 # gpg
 brew install gpg
 # imagemagick
-brew install imagemagick --with-webp
+brew install imagemagick
 # nodejs
 brew install node
 # node version manager (nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-# yarn
-brew install yarn
+# cask
+brew install --cask rectangle
 # the fuck
 brew install thefuck
 # Bash
@@ -34,6 +34,8 @@ brew install bash
 brew install bash-completion2
 # Zplug
 brew install zplug
+# yarn
+npm install -g yarn
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
@@ -44,10 +46,11 @@ fi;
 # Apps
 # ----------------------------
 
-# Marta
-brew cask install marta
+# Install rosetta
+softwareupdate --install-rosetta
+
 # Keybase
-brew cask install keybase
+arch -x86_64 brew install --cask keybase
 
 # Cleanup
 # ----------------------------

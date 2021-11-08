@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+  chsh -s "${BREW_PREFIX}/bin/bash";
+fi;
+
 # Close any open System Preferences panes (prevent override)
 osascript -e 'tell application "System Preferences" to quit'
 
