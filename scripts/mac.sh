@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+# from mathaisbynens dotfiles - https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
 # Close any open System Preferences panes (prevent override)
 osascript -e 'tell application "System Preferences" to quit'
@@ -160,6 +156,7 @@ for app in "Activity Monitor" \
 	"Photos" \
 	"Safari" \
 	"SystemUIServer" \
+	"Terminal" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done

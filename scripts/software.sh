@@ -3,7 +3,7 @@
 # Brew
 # ----------------------------
 
-# install
+# Install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -12,7 +12,7 @@ brew upgrade
 # Add coreutils
 brew install coreutils
 
-# Libraries
+# Brew Software
 # ----------------------------
 
 # grep
@@ -32,16 +32,27 @@ brew install thefuck
 # Bash
 brew install bash
 brew install bash-completion2
-# Zplug
-brew install zplug
 # yarn
-npm install -g yarn
+brew install yarn
+# Fzf
+brew install fzf
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
+
+# Oh My ZSH
+# ----------------------------
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+git clone --depth=1 https://github.com/bernardop/iterm-tab-color-oh-my-zsh.git ~/.oh-my-zsh/custom/plugins/iterm-tab-color
+git clone --depth=1 https://github.com/trystan2k/zsh-tab-title ~/.oh-my-zsh/custom/plugins/zsh-tab-title
+git clone --depth=1 https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Apps
 # ----------------------------

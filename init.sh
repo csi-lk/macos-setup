@@ -15,6 +15,9 @@ source ~/.bash_profile;
 echo "Setting up bashrc..."
 cp ./config/.bashrc ~/.bashrc;
 
+echo "Setting up bashrc..."
+cp ./config/.bash_profile ~/.bash_profile;
+
 echo "Moving to setup files..."
 
 # Setup SSH
@@ -28,9 +31,9 @@ fi
 # Setup Brew
 # ----------------------------
 
-if [[ "yes" == $(continue "Setup Brew?") ]]
+if [[ "yes" == $(continue "Setup Software?") ]]
 then
-    . ./scripts/brew.sh
+    . ./scripts/software.sh
 fi
 
 # Setup Git
