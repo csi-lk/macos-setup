@@ -19,6 +19,8 @@ brew install coreutils
 brew install grep
 # gpg
 brew install gpg
+# add gpg path to git
+git config --global gpg.program $(which gpg)
 # imagemagick
 brew install imagemagick
 # nodejs
@@ -39,9 +41,9 @@ brew install fzf
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells
+  chsh -s "${BREW_PREFIX}/bin/bash"
+fi
 
 # Oh My ZSH
 # ----------------------------
